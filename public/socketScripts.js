@@ -1,9 +1,13 @@
-const socket = io();
+const socket = io.connect('http://localhost:3000');
 
 function init() {
     draw();
     socket.emit('init', {playerName: player.name});
 }
+
+socket.on('connect_error', () => {
+    console.log('Socket.io connection error in client');
+});
 
 socket.on('initReturn', data => {
     orbs = data.orbs;
