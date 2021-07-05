@@ -9,13 +9,13 @@ const checkForPlayerCollisions = require('./checkCollisions').checkForPlayerColl
 let orbs = [];
 let players = [];
 const settings = {
-    defaultOrbs: 50,
+    defaultOrbs: 5000,
     defaultSpeed: 6,
     defaultSize: 6,
     // As the player size gets bigger, zoom out
     zoom: 1.5,
-    worldWidth: 500,
-    worldHeight: 500
+    worldWidth: 5000,
+    worldHeight: 5000
 };
 
 initGame();
