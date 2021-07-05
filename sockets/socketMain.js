@@ -29,6 +29,7 @@ setInterval(() => {
 }, 33);
 
 io.sockets.on('connect', (socket) => {
+    console.log('socket connected')
     let player = {};
     player.tickSent = false;
     // A player has connected
